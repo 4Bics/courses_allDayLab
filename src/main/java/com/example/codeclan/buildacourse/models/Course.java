@@ -21,6 +21,7 @@ public class Course {
     private String town;
 
     @Column
+    @Enumerated(EnumType.STRING)
     private RatingType rating;
 
     @OneToMany(mappedBy = "course")
@@ -75,4 +76,6 @@ public class Course {
     public void setBookings(List<Booking> bookings) {
         this.bookings = bookings;
     }
+
+
 }
